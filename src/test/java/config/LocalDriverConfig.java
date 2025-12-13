@@ -11,5 +11,4 @@ public interface LocalDriverConfig extends Config {
 
     @Key("device")
     String device();
-
 }

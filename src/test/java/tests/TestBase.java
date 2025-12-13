@@ -2,9 +2,11 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import drivers.SelectorDriver;
 import helpers.Attach;
+import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -26,6 +28,8 @@ public class TestBase {
     void setupConfig() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open();
+        AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+        driver.startRecordingScreen();
     }
 
     @AfterEach
@@ -34,9 +38,10 @@ public class TestBase {
         String deviceHost = System.getProperty("deviceHost", "emulation");
         if ("browserstack".equals(deviceHost)) {
             Attach.addVideo(sessionId);
+        } else {
+            Attach.appiumVideo();
         }
         System.out.println(sessionId);
-
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         closeWebDriver();

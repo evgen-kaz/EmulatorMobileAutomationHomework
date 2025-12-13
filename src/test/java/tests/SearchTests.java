@@ -13,15 +13,15 @@ public class SearchTests extends TestBase {
     @Tag("Позитивный")
     @DisplayName("Поиску по слову 'Test'")
     void successfulSearchTest() {
-            searchScreen.clickInputSearch();
-            searchScreen.inputTextInSearchInput("Testing");
-            searchScreen.searchInputByText();
-            searchScreen.checkResultSearchText();
-            searchScreen.clickFirstArticle();
-            searchScreen.openPageArticle();
+            searchScreen.checkingPresenceLanguageSelectionButton();
+            searchScreen.clickButtonNext();
+            searchScreen.checkingTitleOnSecondPage();
+            searchScreen.clickButtonNext();
+            searchScreen.checkingButtonJoinWikipedia();
+
+
     }
 }
 
 //./gradlew clean test -DdeviceHost=emulation
 //./gradlew clean test -DdeviceHost=real
-//./gradlew clean test -DdeviceHost=browserstack
