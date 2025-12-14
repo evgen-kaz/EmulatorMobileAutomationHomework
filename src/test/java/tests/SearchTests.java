@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screen.SearchScreen;
 
+@Tag("browserstack")
 public class SearchTests extends TestBase {
 
     SearchScreen searchScreen = new SearchScreen();
@@ -13,15 +14,13 @@ public class SearchTests extends TestBase {
     @Tag("Позитивный")
     @DisplayName("Поиску по слову 'Test'")
     void successfulSearchTest() {
-            searchScreen.checkingPresenceLanguageSelectionButton();
-            searchScreen.clickButtonNext();
-            searchScreen.checkingTitleOnSecondPage();
-            searchScreen.clickButtonNext();
-            searchScreen.checkingButtonJoinWikipedia();
-
-
+            searchScreen.clickInputSearch();
+            searchScreen.inputTextInSearchInput("Testing");
+            searchScreen.searchInputByText();
+            searchScreen.checkResultSearchText();
+            searchScreen.clickFirstArticle();
+            searchScreen.openPageArticle();
     }
 }
 
-//./gradlew clean test -DdeviceHost=emulation
-//./gradlew clean test -DdeviceHost=real
+//./gradlew clean browserstack -DdeviceHost=browserstack -DuserName=evgentest_URiWlJ -DaccessKey=FWgmx1HCZaHKgxYwNsnj

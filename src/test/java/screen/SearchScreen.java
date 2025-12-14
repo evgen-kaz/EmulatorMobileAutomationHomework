@@ -12,56 +12,19 @@ import static io.appium.java_client.AppiumBy.accessibilityId;
 import static io.appium.java_client.AppiumBy.id;
 
 public class SearchScreen {
-
     SelenideElement
-            languageSelectionButton = $(id("org.wikipedia.alpha:id/addLanguageButton")),
-            nextButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")),
-            titleOnSecondPage = $(id("org.wikipedia.alpha:id/primaryTextView")),
-            buttonJoinWikipedia = $(id("org.wikipedia.alpha:id/secondaryTextView")),
-
-
-
-
-
             inputSearch = $(accessibilityId("Search Wikipedia")),
+            inputForSearchText = $(id("org.wikipedia.alpha:id/search_src_text")),
             titleInTheArticle = $(id("Text"));
-
-
-
-
     ElementsCollection
             resultSearch = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
 
-    @Step("Проверка наличия кнопки выбора языка")
-    public void checkingPresenceLanguageSelectionButton() {
-        nextButton.shouldHave();
+    @Step("Клик в поисковую строку")
+    public void clickInputSearch() {
+        inputSearch.click();
     }
 
-    @Step("Переход на следующую страницу")
-    public void clickButtonNext() {
-        languageSelectionButton.shouldHave();
-    }
-
-    @Step("Проверка наличия заголовка на второй странице")
-    public void checkingTitleOnSecondPage() {
-        titleOnSecondPage.shouldHave();
-    }
-
-    @Step("Проверка наличия кнопки 'Join Wikipedia'")
-    public void checkingButtonJoinWikipedia() {
-        buttonJoinWikipedia.shouldHave();
-    }
-
-
-
-
-
-
-
-
-
-
-    /*@Step("Ввод слова 'Test' в поисковую строку")
+    @Step("Ввод слова 'Test' в поисковую строку")
     public void inputTextInSearchInput(String text) {
         inputForSearchText.sendKeys(text);
     }
@@ -83,5 +46,6 @@ public class SearchScreen {
 
     @Step("Открытие первой статьи")
     public void openPageArticle() {
-        titleInTheArticle.shouldHave();*/
+        titleInTheArticle.shouldHave();
     }
+}

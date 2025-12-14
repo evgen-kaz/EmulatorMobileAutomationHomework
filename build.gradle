@@ -10,7 +10,8 @@ def aspectjWeaverVersion = "1.9.22",
     junitVersion = "5.10.0",
     slf4jVersion = "2.0.7",
     ownerVersion = "1.0.4",
-    commonsVersion = "2.11.0"
+    commonsVersion = "2.11.0",
+        assertjVersion = "3.27.3"
 
 allure {
     report {
@@ -32,6 +33,7 @@ repositories {
 
 dependencies {
     testImplementation(
+            "org.assertj:assertj-core:$assertjVersion",
             "org.aspectj:aspectjweaver:$aspectjWeaverVersion",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
@@ -63,6 +65,20 @@ tasks.withType(Test) {
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+}
+
+task browserstack_test(type: Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags("browserstack")
+    }
+}
+
+task emulatorOrReal_test(type: Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags("emulatorOrReal")
+    }
 }
 
 //./gradlew clean test -DdeviceHost=emulation
