@@ -22,5 +22,3 @@ public class SearchTests extends TestBase {
             searchScreen.openPageArticle();
     }
 }
-
-//./gradlew clean browserstack -DdeviceHost=browserstack -DuserName=evgentest_URiWlJ -DaccessKey=FWgmx1HCZaHKgxYwNsnj
