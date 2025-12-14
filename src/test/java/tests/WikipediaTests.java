@@ -47,8 +47,3 @@ public class WikipediaTests extends TestBase {
         searchScreen.checkingPresenceButtonGetStarted();
     }
 }
-
-//./gradlew clean emulatorOrReal -DdeviceHost=emulation
-//./gradlew clean test -DdeviceHost=emulation
-//./gradlew clean test -DdeviceHost=real
-//./gradlew clean test -DdeviceHost=browserstack -DuserName=evgentest_URiWlJ -DaccessKey=FWgmx1HCZaHKgxYwNsnj
