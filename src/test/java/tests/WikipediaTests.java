@@ -47,3 +47,5 @@ public class WikipediaTests extends TestBase {
         searchScreen.checkingPresenceButtonGetStarted();
     }
 }
+
+

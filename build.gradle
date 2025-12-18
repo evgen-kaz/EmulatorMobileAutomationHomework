@@ -67,6 +67,7 @@ test {
     systemProperties(System.getProperties())
 }
 
+
 task browserstack_test(type: Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
@@ -81,6 +82,3 @@ task emulatorOrReal_test(type: Test) {
     }
 }
 
-//./gradlew clean test -DdeviceHost=emulation
-//./gradlew clean test -DdeviceHost=real
-//./gradlew clean test -DdeviceHost=browserstack
