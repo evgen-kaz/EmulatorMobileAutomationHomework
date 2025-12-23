@@ -16,7 +16,7 @@ public class SearchTests extends TestBase {
 
     @Test
     @Tag("Позитивный")
-    @DisplayName("Поиску по слову 'Test'")
+    @DisplayName("Поиску по слову 'Testing'")
     void successfulSearchTest() {
             searchScreen.clickInputSearch();
             searchScreen.inputTextInSearchInput("Testing");
