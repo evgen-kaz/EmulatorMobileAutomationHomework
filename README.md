@@ -34,7 +34,7 @@
 - Проверка всех экранов онбординга
 ---
 <a id="console"></a>
-## <img src='media/icons/gradle.svg' width="50"/> Запуск из терминала
+## <img src='media/icons/gradle.svg' width="25"/> Запуск из терминала
 
 Локальный запуск на эмуляторе:
 ```
@@ -52,7 +52,7 @@
 
 ---
 <a id="jenkins"></a>
-## <img src='media/icons/jenkins.svg' width="50"/> Сборка в Jenkins
+## <img src='media/icons/jenkins.svg' width="25"/> Сборка в Jenkins
 
 [Сборка в Jenkins](https://jenkins.autotests.cloud/job/EmulatorMobileAutomationHomework/)
 
@@ -60,7 +60,7 @@
 
 ---
 <a id="allure_TestOps"></a>
-## <img src='media/icons/Allure_TO.svg' width="50"/> Интеграция с Allure TestOps
+## <img src='media/icons/Allure_TO.svg' width="25"/> Интеграция с Allure TestOps
 [Ссылка на Allure TestOps](https://allure.autotests.cloud/project/5056/test-cases?treeId=0)
 
 * ### Главный экран запуска
@@ -71,6 +71,8 @@
 
 ---
 <a id="video"></a>
-## <img src='media/icons/appium.svg' width="50"/> Пример видео выполнения теста на эмуляторе андроид
+## <img src='media/icons/appium.svg' width="25"/> Пример видео выполнения теста на эмуляторе андроид
 
-<img src='media/gif/Запись_теста2.gif'/>
+<p align="center">  
+<img src='media/gif/Запись_теста2.gif' width="300" />
+< p/>
