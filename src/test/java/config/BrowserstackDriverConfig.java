@@ -31,7 +31,6 @@ public interface BrowserstackDriverConfig extends Config {
     String browserstackUrl();
 
     @Key("projectName")
-    @DefaultValue("automation_mobile")
     String projectName();
 
     @Key("buildName")
