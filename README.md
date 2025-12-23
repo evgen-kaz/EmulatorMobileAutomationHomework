@@ -74,5 +74,7 @@
 ## <img src='media/icons/appium.svg' width="25"/> Пример видео выполнения теста на эмуляторе андроид
 
 <div style="width: 350px; margin: 0 auto; background-color: #f0f0f0; padding: 5px; text-align: center;">
-  <img src='media/gif/Запись_теста2.gif' width="300"/>
+<p align="center">    
+<img src='media/gif/Запись_теста2.gif' width="300"/>
+</p>
 </div>
