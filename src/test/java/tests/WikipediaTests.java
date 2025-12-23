@@ -1,10 +1,14 @@
 package tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screen.EmulatorRealScreen;
 
+@Owner("Evgenia Zhakova")
+@Feature("Onboarding")
 @Tag("emulatorOrReal")
 public class WikipediaTests extends TestBase {
 
