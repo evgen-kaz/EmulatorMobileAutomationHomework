@@ -73,4 +73,4 @@
 <a id="video"></a>
 ## <img src='media/icons/appium.svg' width="50"/> Пример видео выполнения теста на эмуляторе андроид
 
-<img src='media/gif/Запись_теста.gif'/>
+<img src='media/gif/Запись_теста2.gif'/>
