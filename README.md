@@ -63,8 +63,11 @@
 ## <img src='media/icons/Allure_TO.svg' width="25"/> Интеграция с Allure TestOps
 [Ссылка на Allure TestOps](https://allure.autotests.cloud/project/5056/test-cases?treeId=0)
 
-* ### Запущенный тест-кейс
+* ### Главный экран запуска
 <img src='media/icons/Allure_testOps_Kosar.jpg'/>
+
+* ### Dashboard прогонов
+<img src='media/icons/Дашборд_прогонов_korsar.jpg'/>
 
 ---
 <a id="video"></a>

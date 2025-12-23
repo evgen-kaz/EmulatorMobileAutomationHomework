@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import screen.SearchScreen;
 
 @Owner("Evgenia Zhakova")
-@Feature("Поиск статьи по слову 'test'")
+@Feature("Поиск статьи по слову")
 @Tag("browserstack")
 public class SearchTests extends TestBase {
 
