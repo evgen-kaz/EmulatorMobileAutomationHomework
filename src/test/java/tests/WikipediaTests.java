@@ -52,6 +52,3 @@ public class WikipediaTests extends TestBase {
     }
 }
 
-//./gradlew clean browserstack -DdeviceHost=browserstack -DuserName=anna_wau3Mx -DaccessKey=nX6zzGFtSbgVJs5C4sW5
-//./gradlew clean emulatorOrReal -DdeviceHost=emulation
-//./gradlew clean emulatorOrReal -DdeviceHost=real

@@ -27,4 +27,4 @@ public class SearchTests extends TestBase {
     }
 }
 
-//./gradlew clean browserstack -DdeviceHost=browserstack -DuserName=anna_wau3Mx -DaccessKey=nX6zzGFtSbgVJs5C4sW5
+

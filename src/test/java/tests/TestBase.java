@@ -11,6 +11,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -28,14 +29,25 @@ public class TestBase {
         Configuration.browser = SelectorDriver.chooseDriver();
         Configuration.browserSize = null;
         Configuration.timeout = 30000;
+        Configuration.baseUrl = "";
+        Configuration.pageLoadStrategy = "none";
+        Configuration.reopenBrowserOnFail = false;
     }
 
     @BeforeEach
     void setupConfig() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open();
-        AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
-        driver.startRecordingScreen();
+        /*AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+        driver.startRecordingScreen();*/
+        WebDriver webDriver = WebDriverRunner.getWebDriver();
+
+        if (webDriver instanceof AndroidDriver) {
+            AndroidDriver driver = (AndroidDriver) webDriver;
+            driver.startRecordingScreen();
+        } else {
+            System.out.println("Драйвер не является AndroidDriver, тип: " + webDriver.getClass().getName());
+        }
     }
 
     @AfterEach
@@ -48,7 +60,7 @@ public class TestBase {
             Attach.appiumVideo();
         }
         System.out.println(sessionId);
-        Attach.screenshotAs("Last screenshot");
+        //.screenshotAs("Last screenshot");
         Attach.pageSource();
         closeWebDriver();
     }
